@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI智能记账应用原型</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title text-center mb-30">AI智能记账应用原型</h1>
+        
+        <div class="prototype-container">
+            <!-- 欢迎/登录界面 -->
+            <div class="screen">
+                <div class="screen-title">欢迎/登录界面</div>
+                <div class="screen-content">
+                    <div class="flex-center" style="height: 100%;">
+                        <div class="text-center">
+                            <div style="font-size: 60px; color: var(--primary-color); margin-bottom: 20px;">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                            <h2 class="mb-20">AI智能记账</h2>
+                            <p class="mb-30 text-muted">智能记录每一笔支出，轻松规划财务未来</p>
+                            
+                            <button class="btn btn-block mb-10">
+                                <i class="fab fa-weixin"></i> 微信登录
+                            </button>
+                            <button class="btn btn-secondary btn-block mb-10">
+                                <i class="fas fa-mobile-alt"></i> 手机号登录
+                            </button>
+                            <button class="btn btn-outline btn-block">
+                                <i class="fas fa-user"></i> 游客体验
+                            </button>
+                            
+                            <p class="mt-20 text-muted" style="font-size: 12px;">
+                                登录即表示同意我们的<a href="#" style="color: var(--primary-color);">服务条款</a>和<a href="#" style="color: var(--primary-color);">隐私政策</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 首页/概览 -->
+            <div class="screen">
+                <div class="screen-title">首页/概览</div>
+                <div class="screen-content">
+                    <div class="flex-between mb-20">
+                        <div>
+                            <h2>你好，小明</h2>
+                            <p class="text-muted">今天是个控制支出的好日子</p>
+                        </div>
+                        <div style="width: 40px; height: 40px; border-radius: 50%; background: #ddd; overflow: hidden;">
+                            <i class="fas fa-user" style="font-size: 30px; margin: 5px 0 0 9px;"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-20">
+                        <div class="flex-between mb-10">
+                            <h3>本月概览</h3>
+                            <span class="text-muted">6月1日-6月30日</span>
+                        </div>
+                        
+                        <div class="flex-between mb-10">
+                            <div>
+                                <p class="text-muted">总支出</p>
+                                <h3 class="text-danger">¥3,246.50</h3>
+                            </div>
+                            <div>
+                                <p class="text-muted">总收入</p>
+                                <h3 class="text-success">¥8,500.00</h3>
+                            </div>
+                            <div>
+                                <p class="text-muted">结余</p>
+                                <h3 class="text-primary">¥5,253.50</h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="ai-bubble mb-20">
+                        <p><i class="fas fa-robot"></i> AI智能建议</p>
+                        <div class="divider"></div>
+                        <p>与上月相比，你在餐饮上的支出增加了15%。考虑减少外卖频率，可以节省约¥300。</p>
+                    </div>
+                    
+                    <h3 class="mb-10">最近交易</h3>
+                    <div class="transaction-card">
+                        <div class="transaction-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-title">午餐</div>
+                            <div class="transaction-date">今天 12:30</div>
+                        </div>
+                        <div class="transaction-amount amount-expense">-¥35.00</div>
+                    </div>
+                    
+                    <div class="transaction-card">
+                        <div class="transaction-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-title">超市购物</div>
+                            <div class="transaction-date">昨天 18:45</div>
+                        </div>
+                        <div class="transaction-amount amount-expense">-¥128.50</div>
+                    </div>
+                    
+                    <div class="transaction-card">
+                        <div class="transaction-icon">
+                            <i class="fas fa-money-check-alt"></i>
+                        </div>
+                        <div class="transaction-details">
+                            <div class="transaction-title">工资收入</div>
+                            <div class="transaction-date">06-15 09:00</div>
+                        </div>
+                        <div class="transaction-amount amount-income">+¥8,500.00</div>
+                    </div>
+                    
+                    <div class="text-center mt-10">
+                        <a href="#" class="text-primary">查看更多交易 <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    
+                    <!-- 导航栏 -->
+                    <div class="nav-bar">
+                        <div class="nav-item active">
+                            <i class="fas fa-home"></i>
+                            <span>首页</span>
+                        </div>
+                        <div class="nav-item">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>统计</span>
+                        </div>
+                        <div class="nav-item">
+                            <div style="width: 50px; height: 50px; background: var(--primary-color); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-top: -25px; color: white; box-shadow: var(--box-shadow);">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="nav-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>预算</span>
+                        </div>
+                        <div class="nav-item">
+                            <i class="fas fa-user"></i>
+                            <span>我的</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- AI智能记账 -->
+            <div class="screen">
+                <div class="screen-title">AI智能记账</div>
+                <div class="screen-content">
+                    <div class="flex-between mb-20">
+                        <a href="#"><i class="fas fa-arrow-left"></i></a>
+                        <h3>添加交易记录</h3>
+                        <div></div>
+                    </div>
+                    
+                    <div class="card mb-20">
+                        <div class="flex-between">
+                            <div>
+                                <p class="text-muted">识别到的消费:</p>
+                                <h3>星巴克咖啡</h3>
+                            </div>
+                            <div class="flex-center" style="width: 60px; height: 60px; background: #f0f4f9; border-radius: 50%;">
+                                <i class="fas fa-coffee" style="font-size: 24px; color: var(--primary-color);"></i>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="flex-between">
+                            <div class="text-muted">金额:</div>
+                            <div><h3>¥32.00</h3></div>
+                        </div>
+                        <div class="flex-between">
+                            <div class="text-muted">日期:</div>
+                            <div>今天 15:30</div>
+                        </div>
+                        <div class="flex-between">
+                            <div class="text-muted">分类:</div>
+                            <div><span class="badge badge-primary">餐饮</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="ai-suggestion">
+                        <i class="fas fa-lightbulb text-warning"></i> 本月咖啡消费已达¥158，超出预算30%
+                    </div>
+                    
+                    <div class="form-group mt-20">
+                        <label class="form-label">备注</label>
+                        <input type="text" class="form-control" placeholder="添加备注..." value="与客户会面">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">支付方式</label>
+                        <select class="form-control">
+                            <option>微信支付</option>
+                            <option>支付宝</option>
+                            <option>信用卡</option>
+                            <option>现金</option>
+                        </select>
+                    </div>
+                    
+                    <button class="btn btn-block mt-20">
+                        保存
+                    </button>
+                    
+                    <!-- 导航栏 -->
+                    <div class="nav-bar">
+                        <div class="nav-item">
+                            <i class="fas fa-home"></i>
+                            <span>首页</span>
+                        </div>
+                        <div class="nav-item">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>统计</span>
+                        </div>
+                        <div class="nav-item">
+                            <div style="width: 50px; height: 50px; background: var(--primary-color); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-top: -25px; color: white; box-shadow: var(--box-shadow);">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="nav-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>预算</span>
+                        </div>
+                        <div class="nav-item">
+                            <i class="fas fa-user"></i>
+                            <span>我的</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 统计分析界面 -->
+            <div class="screen">
+                <div class="screen-title">统计分析</div>
+                <div class="screen-content">
+                    <div class="flex-between mb-20">
+                        <h3>消费分析</h3>
+                        <div class="flex">
+                            <span class="text-primary">本月 <i class="fas fa-chevron-down"></i></span>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-20">
+                        <div class="flex-between mb-10">
+                            <h3>消费总览</h3>
+                            <span class="text-muted">6月1日-6月30日</span>
+                        </div>
+                        
+                        <div class="chart-container" style="background: #f0f4f9; border-radius: var(--border-radius); position: relative;">
+                            <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center;">
+                                <div style="font-size: 24px; color: var(--primary-color);">
+                                    <i class="fas fa-chart-pie"></i>
+                                </div>
+                                <div class="mt-10">饼图数据展示</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex-between mt-20">
+                            <div class="flex" style="align-items: center;">
+                                <div style="width: 12px; height: 12px; background: var(--primary-color); border-radius: 50%; margin-right: 8px;"></div>
+                                <span>餐饮</span>
+                            </div>
+                            <div>¥1,235.00 (38%)</div>
+                        </div>
+                        <div class="flex-between mt-10">
+                            <div class="flex" style="align-items: center;">
+                                <div style="width: 12px; height: 12px; background: var(--secondary-color); border-radius: 50%; margin-right: 8px;"></div>
+                                <span>购物</span>
+                            </div>
+                            <div>¥856.50 (26%)</div>
+                        </div>
+                        <div class="flex-between mt-10">
+                            <div class="flex" style="align-items: center;">
+                                <div style="width: 12px; height: 12px; background: var(--accent-color); border-radius: 50%; margin-right: 8px;"></div>
+                                <span>交通</span>
+                            </div>
+                            <div>¥625.00 (19%)</div>
+                        </div>
+                        <div class="flex-between mt-10">
+                            <div class="flex" style="align-items: center;">
+                                <div style="width: 12px; height: 12px; background: #f39c12; border-radius: 50%; margin-right: 8px;"></div>
+                                <span>娱乐</span>
+                            </div>
+                            <div>¥530.00 (16%)</div>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-20">
+                        <h3 class="mb-20">支出趋势</h3>
+                        <div class="chart-container" style="background: #f0f4f9; border-radius: var(--border-radius); position: relative;">
+                            <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center;">
+                                <div style="font-size: 24px; color: var(--primary-color);">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="mt-10">折线图数据展示</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="ai-bubble">
+                        <p><i class="fas fa-robot"></i> AI分析洞察</p>
+                        <div class="divider"></div>
+                        <p>你的餐饮消费比同龄人平均高出20%。尝试自己做饭可以大幅节省开支。</p>
+                        <p class="mt-10">你每周四和周五的消费明显高于其他日子，建议提前规划这两天的活动。</p>
+                    </div>
+                    
+                    <!-- 导航栏 -->
+                    <div class="nav-bar">
+                        <div class="nav-item">
+                            <i class="fas fa-home"></i>
+                            <span>首页</span>
+                        </div>
+                        <div class="nav-item active">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>统计</span>
+                        </div>
+                        <div class="nav-item">
+                            <div style="width: 50px; height: 50px; background: var(--primary-color); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-top: -25px; color: white; box-shadow: var(--box-shadow);">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="nav-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>预算</span>
+                        </div>
+                        <div class="nav-item">
+                            <i class="fas fa-user"></i>
+                            <span>我的</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 预算管理界面 -->
+            <div class="screen">
+                <div class="screen-title">预算管理</div>
+                <div class="screen-content">
+                    <div class="flex-between mb-20">
+                        <h3>本月预算</h3>
+                        <div class="flex">
+                            <span class="text-primary">6月 <i class="fas fa-chevron-down"></i></span>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-20">
+                        <div class="flex-between mb-10">
+                            <h3>总预算</h3>
+                            <span class="badge badge-success">剩余57%</span>
+                        </div>
+                        
+                        <div class="flex-between mb-10">
+                            <span>¥3,246.50 / ¥7,500.00</span>
+                            <span class="text-muted">还剩16天</span>
+                        </div>
+                        
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 43%;"></div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="mb-10">分类预算</h3>
+                    
+                    <div class="card mb-15">
+                        <div class="flex-between mb-10">
+                            <div class="flex" style="align-items: center;">
+                                <div class="flex-center" style="width: 30px; height: 30px; background: #f0f4f9; border-radius: 50%; margin-right: 10px;">
+                                    <i class="fas fa-utensils" style="color: var(--primary-color);"></i>
+                                </div>
+                                <span>餐饮</span>
+                            </div>
+                            <span class="badge badge-warning">接近预算</span>
+                        </div>
+                        
+                        <div class="flex-between mb-5">
+                            <span>¥1,235.00 / ¥1,500.00</span>
+                            <span>82%</span>
+                        </div>
+                        
+                        <div class="progress-container progress-warning">
+                            <div class="progress-bar" style="width: 82%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-15">
+                        <div class="flex-between mb-10">
+                            <div class="flex" style="align-items: center;">
+                                <div class="flex-center" style="width: 30px; height: 30px; background: #f0f4f9; border-radius: 50%; margin-right: 10px;">
+                                    <i class="fas fa-shopping-bag" style="color: var(--secondary-color);"></i>
+                                </div>
+                                <span>购物</span>
+                            </div>
+                            <span class="badge badge-primary">良好</span>
+                        </div>
+                        
+                        <div class="flex-between mb-5">
+                            <span>¥856.50 / ¥2,000.00</span>
+                            <span>43%</span>
+                        </div>
+                        
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 43%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-15">
+                        <div class="flex-between mb-10">
+                            <div class="flex" style="align-items: center;">
+                                <div class="flex-center" style="width: 30px; height: 30px; background: #f0f4f9; border-radius: 50%; margin-right: 10px;">
+                                    <i class="fas fa-bus" style="color: var(--accent-color);"></i>
+                                </div>
+                                <span>交通</span>
+                            </div>
+                            <span class="badge badge-danger">超出预算</span>
+                        </div>
+                        
+                        <div class="flex-between mb-5">
+                            <span>¥625.00 / ¥500.00</span>
+                            <span>125%</span>
+                        </div>
+                        
+                        <div class="progress-container progress-danger">
+                            <div class="progress-bar" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="ai-suggestion mt-20">
+                        <i class="fas fa-lightbulb text-warning"></i> AI建议：基于你近期的消费习惯，建议调整餐饮预算至¥1,800，减少购物预算至¥1,500
+                    </div>
+                    
+                    <button class="btn btn-outline btn-block mt-20">
+                        <i class="fas fa-plus"></i> 添加新预算
+                    </button>
+                    
+                    <!-- 导航栏 -->
+                    <div class="nav-bar">
+                        <div class="nav-item">
+                            <i class="fas fa-home"></i>
+                            <span>首页</span>
+                        </div>
+                        <div class="nav-item">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>统计</span>
+                        </div>
+                        <div class="nav-item">
+                            <div style="width: 50px; height: 50px; background: var(--primary-color); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-top: -25px; color: white; box-shadow: var(--box-shadow);">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="nav-item active">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>预算</span>
+                        </div>
+                        <div class="nav-item">
+                            <i class="fas fa-user"></i>
+                            <span>我的</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 个人中心界面 -->
+            <div class="screen">
+                <div class="screen-title">个人中心</div>
+                <div class="screen-content">
+                    <div class="text-center mb-30">
+                        <div style="width: 80px; height: 80px; border-radius: 50%; background: #ddd; overflow: hidden; margin: 0 auto;">
+                            <i class="fas fa-user" style="font-size: 60px; margin: 10px 0 0 18px;"></i>
+                        </div>
+                        <h2 class="mt-10">小明</h2>
+                        <p class="text-muted">xiaoming@example.com</p>
+                    </div>
+                    
+                    <div class="card mb-20">
+                        <div class="flex-between">
+                            <h3>我的账户</h3>
+                            <i class="fas fa-chevron-right text-muted"></i>
+                        </div>
+                    </div>
+                    
+                    <h3 class="mb-10">个人设置</h3>
+                    
+                    <div class="card mb-15">
+                        <div class="flex-between">
+                            <div class="flex" style="align-items: center;">
+                                <div class="flex-center" style="width: 30px; height: 30px; background: #f0f4f9; border-radius: 50%; margin-right: 10px;">
+                                    <i class="fas fa-bell" style="color: var(--primary-color);"></i>
+                                </div>
+                                <span>消息通知</span>
+                            </div>
+                            <i class="fas fa-chevron-right text-muted"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-15">
+                        <div class="flex-between">
+                            <div class="flex" style="align-items: center;">
+                                <div class="flex-center" style="width: 30px; height: 30px; background: #f0f4f9; border-radius: 50%; margin-right: 10px;">
+                                    <i class="fas fa-shield-alt" style="color: var(--secondary-color);"></i>
+                                </div>
+                                <span>隐私与安全</span>
+                            </div>
+                            <i class="fas fa-chevron-right text-muted"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-15">
+                        <div class="flex-between">
+                            <div class="flex" style="align-items: center;">
+                                <div class="flex-center" style="width: 30px; height: 30px; background: #f0f4f9; border-radius: 50%; margin-right: 10px;">
+                                    <i class="fas fa-language" style="color: var(--accent-color);"></i>
+                                </div>
+                                <span>语言</span>
+                            </div>
+                            <div class="flex" style="align-items: center;">
+                                <span class="text-muted mr-10">简体中文</span>
+                                <i class="fas fa-chevron-right text-muted"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="mb-10 mt-20">AI智能助手</h3>
+                    
+                    <div class="card mb-15">
+                        <div class="flex-between">
+                            <div class="flex" style="align-items: center;">
+                                <div class="flex-center" style="width: 30px; height: 30px; background: #f0f4f9; border-radius: 50%; margin-right: 10px;">
+                                    <i class="fas fa-robot" style="color: var(--primary-color);"></i>
+                                </div>
+                                <span>智能分析偏好</span>
+                            </div>
+                            <i class="fas fa-chevron-right text-muted"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-15">
+                        <div class="flex-between">
+                            <div class="flex" style="align-items: center;">
+                                <div class="flex-center" style="width: 30px; height: 30px; background: #f0f4f9; border-radius: 50%; margin-right: 10px;">
+                                    <i class="fas fa-lightbulb" style="color: #f39c12;"></i>
+                                </div>
+                                <span>建议频率</span>
+                            </div>
+                            <div class="flex" style="align-items: center;">
+                                <span class="text-muted mr-10">每天</span>
+                                <i class="fas fa-chevron-right text-muted"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="mb-10 mt-20">其他</h3>
+                    
+                    <div class="card mb-15">
+                        <div class="flex-between">
+                            <div class="flex" style="align-items: center;">
+                                <div class="flex-center" style="width: 30px; height: 30px; background: #f0f4f9; border-radius: 50%; margin-right: 10px;">
+                                    <i class="fas fa-question-circle" style="color: var(--primary-color);"></i>
+                                </div>
+                                <span>帮助中心</span>
+                            </div>
+                            <i class="fas fa-chevron-right text-muted"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-15">
+                        <div class="flex-between">
+                            <div class="flex" style="align-items: center;">
+                                <div class="flex-center" style="width: 30px; height: 30px; background: #f0f4f9; border-radius: 50%; margin-right: 10px;">
+                                    <i class="fas fa-info-circle" style="color: var(--secondary-color);"></i>
+                                </div>
+                                <span>关于我们</span>
+                            </div>
+                            <i class="fas fa-chevron-right text-muted"></i>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-outline btn-block mt-20" style="color: #e74c3c; border-color: #e74c3c;">
+                        <i class="fas fa-sign-out-alt"></i> 退出登录
+                    </button>
+                    
+                    <!-- 导航栏 -->
+                    <div class="nav-bar">
+                        <div class="nav-item">
+                            <i class="fas fa-home"></i>
+                            <span>首页</span>
+                        </div>
+                        <div class="nav-item">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>统计</span>
+                        </div>
+                        <div class="nav-item">
+                            <div style="width: 50px; height: 50px; background: var(--primary-color); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-top: -25px; color: white; box-shadow: var(--box-shadow);">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="nav-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>预算</span>
+                        </div>
+                        <div class="nav-item active">
+                            <i class="fas fa-user"></i>
+                            <span>我的</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- AI场景识别界面 -->
+            <div class="screen">
+                <div class="screen-title">AI场景识别</div>
+                <div class="screen-content">
+                    <div class="flex-between mb-20">
+                        <a href="#"><i class="fas fa-arrow-left"></i></a>
+                        <h3>智能场景识别</h3>
+                        <div></div>
+                    </div>
+                    
+                    <div class="card mb-20 p-15 text-center">
+                        <div style="position: relative; height: 200px; background: #f0f4f9; border-radius: var(--border-radius); overflow: hidden; margin-bottom: 15px;">
+                            <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center;">
+                                <div style="font-size: 40px; color: var(--primary-color);">
+                                    <i class="fas fa-camera"></i>
+                                </div>
+                                <div class="mt-10">拍摄账单/发票/场景</div>
+                            </div>
+                        </div>
+                        
+                        <p class="text-muted mb-10">通过拍摄账单、发票或消费场景，AI将自动识别消费金额和类别</p>
+                        
+                        <div class="flex-between mt-20">
+                            <button class="btn btn-secondary" style="width: 48%;">
+                                <i class="fas fa-image"></i> 相册选择
+                            </button>
+                            <button class="btn" style="width: 48%;">
+                                <i class="fas fa-camera"></i> 拍照识别
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-20">
+                        <h3 class="mb-10">其他识别方式</h3>
+                        <div class="flex-between mb-15">
+                            <div class="flex" style="align-items: center;">
+                                <div class="flex-center" style="width: 40px; height: 40px; background: #f0f4f9; border-radius: 50%; margin-right: 15px;">
+                                    <i class="fas fa-receipt" style="color: var(--primary-color);"></i>
+                                </div>
+                                <div>
+                                    <div>电子发票识别</div>
+                                    <div class="text-muted" style="font-size: 12px;">自动导入电子发票信息</div>
+                                </div>
+                            </div>
+                            <i class="fas fa-chevron-right text-muted"></i>
+                        </div>
+                        
+                        <div class="flex-between mb-15">
+                            <div class="flex" style="align-items: center;">
+                                <div class="flex-center" style="width: 40px; height: 40px; background: #f0f4f9; border-radius: 50%; margin-right: 15px;">
+                                    <i class="fas fa-comment-alt" style="color: var(--secondary-color);"></i>
+                                </div>
+                                <div>
+                                    <div>语音记账</div>
+                                    <div class="text-muted" style="font-size: 12px;">通过语音描述自动记录消费</div>
+                                </div>
+                            </div>
+                            <i class="fas fa-chevron-right text-muted"></i>
+                        </div>
+                        
+                        <div class="flex-between">
+                            <div class="flex" style="align-items: center;">
+                                <div class="flex-center" style="width: 40px; height: 40px; background: #f0f4f9; border-radius: 50%; margin-right: 15px;">
+                                    <i class="fas fa-file-import" style="color: var(--accent-color);"></i>
+                                </div>
+                                <div>
+                                    <div>短信导入</div>
+                                    <div class="text-muted" style="font-size: 12px;">自动识别消费短信记录</div>
+                                </div>
+                            </div>
+                            <i class="fas fa-chevron-right text-muted"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="ai-bubble">
+                        <p><i class="fas fa-robot"></i> AI小贴士</p>
+                        <div class="divider"></div>
+                        <p>拍摄时尽量保持账单/发票平整，光线充足，可以提高识别准确率哦！</p>
+                        <p class="mt-10">已成功识别您的消费习惯，优先推荐常用分类，大大提高记账效率！</p>
+                    </div>
+                    
+                    <!-- 导航栏 -->
+                    <div class="nav-bar">
+                        <div class="nav-item">
+                            <i class="fas fa-home"></i>
+                            <span>首页</span>
+                        </div>
+                        <div class="nav-item">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>统计</span>
+                        </div>
+                        <div class="nav-item active">
+                            <div style="width: 50px; height: 50px; background: var(--primary-color); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-top: -25px; color: white; box-shadow: var(--box-shadow);">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="nav-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>预算</span>
+                        </div>
+                        <div class="nav-item">
+                            <i class="fas fa-user"></i>
+                            <span>我的</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 智能报告界面 -->
+            <div class="screen">
+                <div class="screen-title">智能财务报告</div>
+                <div class="screen-content">
+                    <div class="flex-between mb-20">
+                        <a href="#"><i class="fas fa-arrow-left"></i></a>
+                        <h3>月度智能报告</h3>
+                        <div><i class="fas fa-share-alt"></i></div>
+                    </div>
+                    
+                    <div class="card mb-20">
+                        <div class="flex-between mb-10">
+                            <h3>6月财务评分</h3>
+                            <span class="badge badge-success">85分</span>
+                        </div>
+                        
+                        <p class="text-muted mb-10">比上月提升了8分，继续保持！</p>
+                        
+                        <div class="chart-container" style="height: 100px; background: #f0f4f9; border-radius: var(--border-radius); position: relative;">
+                            <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center;">
+                                <div style="font-size: 18px; color: var(--primary-color);">
+                                    <i class="fas fa-chart-line"></i> 财务评分趋势图
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="ai-bubble mb-20">
+                        <p><i class="fas fa-robot"></i> AI智能分析</p>
+                        <div class="divider"></div>
+                        <p>本月你在控制餐饮消费方面有明显进步，但交通支出超出预算，建议下月关注此项。</p>
+                        <p class="mt-10">储蓄比例达到收入的25%，符合健康财务状况！</p>
+                    </div>
+                    
+                    <h3 class="mb-10">消费习惯分析</h3>
+                    
+                    <div class="card mb-15">
+                        <div class="flex-between mb-10">
+                            <div class="flex" style="align-items: center;">
+                                <div class="flex-center" style="width: 30px; height: 30px; background: #f0f4f9; border-radius: 50%; margin-right: 10px;">
+                                    <i class="fas fa-thumbs-up" style="color: #2ecc71;"></i>
+                                </div>
+                                <span>健康习惯</span>
+                            </div>
+                        </div>
+                        
+                        <ul style="list-style: none; padding-left: 15px;">
+                            <li class="mb-5"><i class="fas fa-check text-success" style="margin-right: 5px;"></i> 按时记录消费，记账习惯良好</li>
+                            <li class="mb-5"><i class="fas fa-check text-success" style="margin-right: 5px;"></i> 有计划的购物，减少冲动消费</li>
+                            <li><i class="fas fa-check text-success" style="margin-right: 5px;"></i> 合理安排固定支出，保持稳定</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card mb-15">
+                        <div class="flex-between mb-10">
+                            <div class="flex" style="align-items: center;">
+                                <div class="flex-center" style="width: 30px; height: 30px; background: #f0f4f9; border-radius: 50%; margin-right: 10px;">
+                                    <i class="fas fa-thumbs-down" style="color: #e74c3c;"></i>
+                                </div>
+                                <span>待改进习惯</span>
+                            </div>
+                        </div>
+                        
+                        <ul style="list-style: none; padding-left: 15px;">
+                            <li class="mb-5"><i class="fas fa-times text-danger" style="margin-right: 5px;"></i> 周末消费过高，周期性超支</li>
+                            <li><i class="fas fa-times text-danger" style="margin-right: 5px;"></i> 咖啡支出仍然较高，可考虑自制</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3 class="mb-10">下月财务建议</h3>
+                        <div class="ai-suggestion mb-10">
+                            <i class="fas fa-lightbulb text-warning"></i> 建议增加餐饮预算，减少交通预算
+                        </div>
+                        <div class="ai-suggestion mb-10">
+                            <i class="fas fa-lightbulb text-warning"></i> 周末活动提前规划，控制临时消费
+                        </div>
+                        <div class="ai-suggestion">
+                            <i class="fas fa-lightbulb text-warning"></i> 考虑增加投资占比，提高资金利用率
+                        </div>
+                    </div>
+                    
+                    <!-- 导航栏 -->
+                    <div class="nav-bar">
+                        <div class="nav-item">
+                            <i class="fas fa-home"></i>
+                            <span>首页</span>
+                        </div>
+                        <div class="nav-item">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>统计</span>
+                        </div>
+                        <div class="nav-item">
+                            <div style="width: 50px; height: 50px; background: var(--primary-color); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-top: -25px; color: white; box-shadow: var(--box-shadow);">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="nav-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>预算</span>
+                        </div>
+                        <div class="nav-item">
+                            <i class="fas fa-user"></i>
+                            <span>我的</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
